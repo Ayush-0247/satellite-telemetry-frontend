@@ -1,0 +1,220 @@
+:root {
+  --bg-root: #f8fafc;
+  --bg-panel: #ffffff;
+  --bg-panel-soft: #f1f5f9;
+
+  --border-subtle: rgba(15, 23, 42, 0.12);
+
+  --text-primary: #0f172a;
+  --text-secondary: #020617;
+  --text-muted: #64748b;
+
+  --accent-blue: #2563eb;
+  --accent-blue-soft: rgba(37, 99, 235, 0.12);
+
+  --accent-red: #dc2626;
+  --accent-red-soft: rgba(220, 38, 38, 0.12);
+
+  --shadow-soft: 0 10px 25px rgba(2, 6, 23, 0.08);
+}
+
+.mc-root {
+  height: 100vh;
+  background: var(--bg-root);
+  color: var(--text-primary);
+  font-family: Inter, ui-sans-serif, system-ui;
+  font-size: 14px;
+  line-height: 1.5;
+}
+*{
+  padding: 0;margin: 0;
+}
+/* ===== Top Bar ===== */
+.mc-topbar {
+  height: 52px;
+  background: linear-gradient(180deg, #222222, #000000);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mc-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.4px;
+}
+
+.pause-btn,
+.logout-btn {
+  background: rgb(83, 85, 83);
+  color: var(--text-secondary);
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pause-btn:hover {
+  background: var(--accent-blue-soft);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.logout-btn:hover {
+  background: var(--accent-red-soft);
+  border-color: var(--accent-red);
+  color: #fecaca;
+}
+
+/* ===== Layout ===== */
+.mc-body {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  height: calc(100vh - 52px);
+}
+
+/* ===== Left Panel ===== */
+.mc-left {
+  background: rgb(0, 0, 0);
+  padding: 18px;
+  
+  border-right: 1px solid var(--border-subtle);
+}
+
+
+.status-pill {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: var(--accent-red-soft);
+  color: #ff0000;
+  margin-bottom: 16px;
+}
+
+/* ===== Section ===== */
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-subtle);
+  text-transform: uppercase;
+}
+
+.row-label {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+.row-value {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.row:hover .row-value {
+  color: var(--accent-blue);
+}
+
+/* ===== Rows ===== */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 10px;
+}
+
+
+
+.row:hover .row-value {
+  color: #60a5fa;
+}
+
+/* ===== Alerts ===== */
+.alerts {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.alerts-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-red);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.alert-item {
+  font-size: 13px;
+  color: #fecaca;
+}
+
+.alert-time {
+  margin-top: 6px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+
+/* ===== Right Panel ===== */
+.mc-right {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  background: #0b0b0b;
+}
+
+/* ===== Chart Card ===== */
+.chart-box {
+  background: linear-gradient(180deg, #fdfeff, #909090);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.chart-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-blue);
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+
+.mc-topbar {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+}
+.mc-left {
+  background: #ffffff;
+}
+.mc-right {
+  background: #f8fafc;
+}
+.status-pill {
+  background: var(--accent-blue-soft);
+  color: var(--accent-blue);
+}
+.chart-box {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+.section-title {
+  color: #10182b;
+}

@@ -5,7 +5,7 @@ const api = axios.create({
   baseURL: "https://satellite-telemetry-backend-1.onrender.com/api",
   // https://satellite-telemetry-backend-1.onrender.com/
 });
-  
+
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token) {
